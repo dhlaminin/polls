@@ -153,7 +153,7 @@ export default {
 
 		timeSpanExpiration() {
 			if (this.poll.event.expiration) {
-				return moment(this.poll.event.expirationDate).fromNow()
+				return moment.utc(this.poll.event.expirationDate).fromNow()
 			} else {
 				return t('polls', 'never')
 			}
